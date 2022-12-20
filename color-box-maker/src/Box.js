@@ -6,7 +6,7 @@ const Box = ({ id, width, height, color, removeBox }) => {
     removeBox(e.target.getAttribute("id"));
   };
   return (
-    <>
+    <div className="Box-container">
       <div
         className="Box"
         style={{
@@ -16,10 +16,10 @@ const Box = ({ id, width, height, color, removeBox }) => {
           backgroundColor: color,
         }}
       ></div>
-      <button onClick={handleDelete} className="delete-btn" id={id}>
+      <button className="delete-btn" onClick={handleDelete}  id={id} >
         x
       </button>
-    </>
+    </div>
   );
 };
 
