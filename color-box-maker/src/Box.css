@@ -1,0 +1,14 @@
+.Box {
+    /* border: 5px solid; */
+    margin: 30px;
+}
+
+/* .Box-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+} */
+
+.delete-btn {
+    margin: 10px;
+}
