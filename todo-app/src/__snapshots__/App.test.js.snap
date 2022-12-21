@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <div
+      class="TodoList-container"
+    >
+      <h1>
+        TodoList
+      </h1>
+      <form>
+        <label
+          for="todo"
+        >
+          Todo: 
+        </label>
+        <input
+          id="todo"
+          name="todo"
+          placeholder="todo"
+          type="text"
+          value=""
+        />
+        <button>
+          Add
+        </button>
+      </form>
+      <div>
+        <ul>
+          <div
+            class="Todo-container"
+          >
+            <li
+              class="Todo"
+              style="list-style-type: none;"
+            >
+              Feed cats
+            </li>
+            <button
+              class="Todo-delete-btn"
+              id="167f8d96-e647-4f02-adea-4600f693ed21"
+            >
+              x
+            </button>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,7 @@
+.Todo {
+    display: inline-block;
+}
+
+.Todo-delete-btn {
+    margin: 10px;
+}
