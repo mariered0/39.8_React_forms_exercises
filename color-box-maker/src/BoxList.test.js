@@ -22,11 +22,11 @@ it("renders without crashing", function() {
     render(<BoxList />);
 });
 
-//it fails the snapshot test because of the uuid. Need to check later.
-// it("matches snapshot", function() {
-//     const { asFragment } = render(<BoxList />);
-//     expect(asFragment()).toMatchSnapshot();
-// });
+// it fails the snapshot test because of the uuid. Need to check later.
+it("matches snapshot", function() {
+    const { asFragment } = render(<BoxList />);
+    expect(asFragment()).toMatchSnapshot();
+});
 
 //Check if the default box is displayed
 it("should display the title", function () {
