@@ -9,8 +9,8 @@ const Box = ({ id, width, height, color, removeBox }) => {
     <div className="Box-container">
       <div
         className="Box"
+        id={id}
         style={{
-          id,
           width,
           height,
           backgroundColor: color,

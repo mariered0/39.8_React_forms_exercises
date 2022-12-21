@@ -15,7 +15,6 @@ const BoxList = () => {
 
   const removeBox = (target) => {
     //make a copy of the box array
-    const newBoxes = [...boxes];
     const updatedBoxes = boxes.filter(function(box) {
         return box.id !== target;
     })
