@@ -54,6 +54,7 @@ it("can delete a box", function () {
     const {queryByText} = render (<BoxList />);
     //removing the box that is displayed by default.
     const xButton = queryByText("x");
+
     fireEvent.click(xButton);
-    expect(xButton).not.toBeInTheDocument();
+    expect(queryByText("xButton")).not.toBeInTheDocument();
 })

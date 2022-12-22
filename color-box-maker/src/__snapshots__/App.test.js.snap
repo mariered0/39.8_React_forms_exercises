@@ -19,12 +19,10 @@ exports[`matches snapshot 1`] = `
         >
           <div
             class="Box"
-            id="6778a724-74e6-420c-a595-97a6bb89275f"
             style="width: 200px; height: 200px; background-color: magenta;"
           />
           <button
             class="delete-btn"
-            id="6778a724-74e6-420c-a595-97a6bb89275f"
           >
             x
           </button>

@@ -13,23 +13,35 @@ const BoxList = () => {
     setBoxes((boxes) => [...boxes, { ...newBox, id: uuid() }]);
   };
 
-  const removeBox = (target) => {
+  const removeBox = (id) => {
     //make a copy of the box array
     const updatedBoxes = boxes.filter(function(box) {
-        return box.id !== target;
+        return box.id !== id;
     })
     //update state
     setBoxes((boxes) => [...updatedBoxes]);
   }
 
+  const boxComponents = boxes.map(box => (
+    <Box
+      key={box.id}
+      id={box.id}
+      width={parseInt(box.width)}
+      height={parseInt(box.height)}
+      color={box.color}
+      removeBox={removeBox}
+      />
+  ))
+
   return (
     <div className="BoxList">
       <h1>Color Box Maker</h1>
       <div className="BoxList-container">
-        {boxes.map(({ id, width, height, color }) => (
-          <Box id={id} key={id} width={parseInt(width)} height={parseInt(height)} color={color} removeBox={removeBox} />
+        {/* {boxes.map(({ width, height, color }) => (
+          <Box width={parseInt(width)} height={parseInt(height)} color={color} removeBox={removeBox} />
         )
-        )}
+        )} */}
+        {boxComponents}
       </div>
     
       <NewBoxForm addBox={addBox} />
