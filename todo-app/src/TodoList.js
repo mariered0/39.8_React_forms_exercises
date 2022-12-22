@@ -10,14 +10,23 @@ const TodoList = () => {
     setTodo((todos) => [...todos, { ...newTodo, id: uuid() }]);
   };
 
-  const removeTodo = (target) => {
+  const removeTodo = (id) => {
     const updatedTodos = todos.filter(function (todo) {
-      return todo.id != target;
+      return todo.id != id;
     });
 
     //update state
     setTodo((todos) => [...updatedTodos]);
   };
+
+  const todoComponents = todos.map(todo => (
+    <Todo
+      id={todo.id}
+      key={todo.key}
+      todo={todo.todo}
+      removeTodo={removeTodo}
+       />   
+  ))
 
   return (
     <div className="TodoList-container">
@@ -25,9 +34,7 @@ const TodoList = () => {
       <NewTodoForm addTodo={addTodo} />
       <div>
         <ul>
-          {todos.map(({ id, todo }) => (
-            <Todo id={id} key={id} todo={todo} removeTodo={removeTodo} />
-          ))}
+          {todoComponents}
         </ul>
       </div>
     </div>
