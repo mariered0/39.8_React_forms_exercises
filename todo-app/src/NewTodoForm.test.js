@@ -10,3 +10,9 @@ it("matches snapshot", function() {
     const { asFragment } = render(<NewTodoForm />);
     expect(asFragment()).toMatchSnapshot();
 });
+
+it("should display the form", function () {
+    const { queryByText } = render(<NewTodoForm />);
+    expect(queryByText("Todo:")).toBeInTheDocument();
+ 
+})
